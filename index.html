@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cedar & Ember — Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">Cedar & Ember</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#reserve">Reserve</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <p class="eyebrow">Wood-fired · Seasonal</p>
+      <h1>Dinner by firelight</h1>
+      <p class="lede">Seasonal plates, open kitchen, and a room built for long tables.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#reserve">Book a table</a>
+        <a class="btn btn-ghost" href="#menu">View the menu</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2>A neighborhood kitchen with a slow fire</h2>
+          <p>
+            Cedar & Ember started as a small supper club. We still cook that way:
+            few ingredients, high heat, and bread that comes out of the oven
+            all night.
+          </p>
+          <p>
+            The menu changes with the market. The fire does not.
+          </p>
+        </div>
+        <aside class="card facts">
+          <h3>Tonight</h3>
+          <ul>
+            <li>Open kitchen, 18 seats at the counter</li>
+            <li>Wine list focused on the Levant and the Mediterranean</li>
+            <li>Walk-ins welcome at the bar until 10pm</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="menu" class="section section-alt">
+      <p class="eyebrow">Menu</p>
+      <h2>A short list, cooked well</h2>
+      <div class="menu-grid">
+        <article class="card">
+          <h3>Starters</h3>
+          <ul class="menu-list">
+            <li>
+              <span>Whipped feta, chili honey, flatbread</span>
+              <span>12</span>
+            </li>
+            <li>
+              <span>Charred octopus, lemon, olive oil</span>
+              <span>18</span>
+            </li>
+            <li>
+              <span>Tomato salad, sumac onions</span>
+              <span>11</span>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Mains</h3>
+          <ul class="menu-list">
+            <li>
+              <span>Wood-fired lamb, yogurt, herbs</span>
+              <span>32</span>
+            </li>
+            <li>
+              <span>Catch of the day, brown butter</span>
+              <span>29</span>
+            </li>
+            <li>
+              <span>Mushroom risotto, pecorino</span>
+              <span>24</span>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Dessert</h3>
+          <ul class="menu-list">
+            <li>
+              <span>Olive oil cake, citrus</span>
+              <span>10</span>
+            </li>
+            <li>
+              <span>Dark chocolate, sea salt</span>
+              <span>11</span>
+            </li>
+            <li>
+              <span>Seasonal fruit, cream</span>
+              <span>9</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="reserve" class="section">
+      <p class="eyebrow">Reservations</p>
+      <h2>Book your table</h2>
+      <form class="card form" id="reserve-form" novalidate>
+        <label>
+          Name
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label>
+          Date
+          <input type="date" name="date" required>
+        </label>
+        <label>
+          Time
+          <select name="time" required>
+            <option value="">Select a time</option>
+            <option>17:30</option>
+            <option>18:00</option>
+            <option>18:30</option>
+            <option>19:00</option>
+            <option>19:30</option>
+            <option>20:00</option>
+            <option>20:30</option>
+          </select>
+        </label>
+        <label>
+          Guests
+          <input type="number" name="guests" min="1" max="12" value="2" required>
+        </label>
+        <label class="full">
+          Notes
+          <textarea name="notes" rows="3" placeholder="Allergies, occasion, seating preference"></textarea>
+        </label>
+        <button class="btn btn-primary full" type="submit">Request reservation</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section id="visit" class="section section-alt">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Visit</p>
+          <h2>Hours & location</h2>
+          <p>14 Cedar Lane<br>Downtown</p>
+          <p><a href="tel:+15550188">(555) 018-1888</a></p>
+        </div>
+        <div class="card">
+          <h3>Hours</h3>
+          <ul class="hours">
+            <li><span>Tue – Thu</span><span>5:30pm – 10pm</span></li>
+            <li><span>Fri – Sat</span><span>5:30pm – 11pm</span></li>
+            <li><span>Sun</span><span>5pm – 9pm</span></li>
+            <li><span>Mon</span><span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Cedar & Ember</p>
+    <p>© 2026 · Reservations confirmed by email</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
